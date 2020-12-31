@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 72
+  controlID: 165
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 78
+  controlID: 121
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 192}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 73
+  controlID: 82
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,8 +298,8 @@ MonoBehaviour:
     y: 0
     width: 682
     height: 665
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -324,8 +324,8 @@ MonoBehaviour:
     y: 665
     width: 682
     height: 282
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -456,9 +456,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: -1.2918748, y: -1.5006938, z: -1.6964836}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -1.2918748, y: -1.5006938, z: -1.6964836}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -509,9 +509,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10
+    m_Target: 12.917439
     speed: 2
-    m_Value: 10
+    m_Value: 12.917439
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -566,7 +566,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 32fbffff
+      m_ExpandedIDs: 5afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -628,21 +628,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Waves
+    - Assets/Scripts
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Waves
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Aspect\Documents\GitHub\IlarioCutajarMSD42CAssignment\HomeAssignment\IlarioCutajar42C
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f83c0000
-    m_LastClickedID: 15608
-    m_ExpandedIDs: 00000000e23c000000ca9a3b
+    m_SelectedIDs: ea3c0000
+    m_LastClickedID: 15594
+    m_ExpandedIDs: 00000000e03c00003c3d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -670,7 +670,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e23c0000
+    m_ExpandedIDs: 00000000e03c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

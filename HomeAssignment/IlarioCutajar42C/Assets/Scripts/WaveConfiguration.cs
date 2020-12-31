@@ -18,6 +18,8 @@ public class WaveConfiguration : ScriptableObject
     //The Selection which will give speed to the enemy prefab at said wave.
     [SerializeField] float enemyPrefabSpeed = 2f;
 
+    [SerializeField] float timebetweenspawns = 10f;
+
     public GameObject FetchEnemyPrefab()
     {
         return enemyPrefab;
@@ -42,6 +44,11 @@ public class WaveConfiguration : ScriptableObject
     public int FetchNumberOfCarsPerWave()
     {
         return numberOfCars;
+    }
+
+    public float FetchTimeBetweenSpawns()
+    {
+        return timebetweenspawns;
     }
 
     // Start is called before the first frame update
