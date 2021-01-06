@@ -17,4 +17,3 @@ MonoBehaviour:
   numberOfCars: 1
   enemyPrefabSpeed: 3
   timebetweenspawns: 5
-  currentWaveDamage: 2

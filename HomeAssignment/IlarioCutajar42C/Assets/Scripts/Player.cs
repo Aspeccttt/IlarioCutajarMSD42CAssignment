@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //properties
-    [SerializeField] float health = 50;
+    [SerializeField] public float health = 50;
     [SerializeField] float playerMoveSpeed = 5f;
     [SerializeField] float playerPadding = 0.7f;
 
@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
         MoveControls();
     }
 
+
+    //MOVEMENT CODE SECTION -------------------------------------------------------------
     private void Boundries()
     {
         Camera Border = Camera.main;
@@ -41,48 +43,16 @@ public class Player : MonoBehaviour
 
         this.transform.position = new Vector2(newXPos, - 3);
     }
+    //-------------------------------------------------------------------------------------
 
-    private void OnTriggerEnter2D(Collider2D otherObject)
+
+
+    //damage handler CODE SECTION ---------------------------------------------------------------------
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        DamageDealer bulletsDamage = otherObject.gameObject.GetComponent<DamageDealer>();
-        WaveConfiguration currentWaveDamage = otherObject.gameObject.GetComponent<WaveConfiguration>();
-
-        if (!bulletsDamage)
-        {
-            return;
-        }
-
-        if (!currentWaveDamage)
-        {
-            return;
-        }
-
-        LoadBulletDamage(bulletsDamage);
-        LoadCollisionDamage(currentWaveDamage);
-
+        //
     }
-
-    private void LoadBulletDamage(DamageDealer bulletsDamage)
-    {
-        health -= bulletsDamage.GetBulletDamage();
-
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void LoadCollisionDamage(WaveConfiguration currentWaveDamage)
-    {
-        health -= currentWaveDamage.FetchTheCurrentDamageOfWave();
-
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-
 
 }
 

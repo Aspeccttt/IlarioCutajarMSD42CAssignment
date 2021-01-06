@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 7051226934675188351}
   - component: {fileID: 7047396114721985414}
   - component: {fileID: 4109774294283075051}
+  - component: {fileID: 4247298604535829017}
+  - component: {fileID: 2129675270529922313}
+  - component: {fileID: -113572447009781580}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -97,3 +100,83 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 0}
+--- !u!60 &4247298604535829017
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2994608811730733905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.86, y: 1.44}
+    newSize: {x: 0.86, y: 1.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.31, y: -0.14999999}
+      - {x: 0.28, y: -0.13}
+      - {x: 0.31, y: 0.31}
+      - {x: 0.31, y: 0.51}
+      - {x: 0.29999998, y: 0.53999996}
+      - {x: 0.22, y: 0.65}
+      - {x: -0.13, y: 0.65}
+      - {x: -0.22, y: 0.63}
+      - {x: -0.29, y: 0.55}
+      - {x: -0.32, y: 0.39999998}
+      - {x: -0.29, y: 0.089999996}
+      - {x: -0.32, y: -0.099999994}
+      - {x: -0.32, y: -0.26999998}
+      - {x: -0.31, y: -0.32999998}
+      - {x: -0.29, y: -0.56}
+      - {x: -0.22, y: -0.61}
+      - {x: -0.01, y: -0.69}
+      - {x: 0.049999997, y: -0.69}
+      - {x: 0.22999999, y: -0.59999996}
+      - {x: 0.28, y: -0.56}
+      - {x: 0.31, y: -0.41}
+--- !u!114 &2129675270529922313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2994608811730733905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9d944be11665445902df598fed756a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHP: 1
+  enemyBulletPrefab: {fileID: 3772493768898794987, guid: cafa79413269dab49b4d92b4b61e9455, type: 3}
+  bulletCounter: 0
+  enemyBulletSpeed: 0
+  deathEffect: {fileID: 0}
+  explosionDuration: 1
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+--- !u!114 &-113572447009781580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2994608811730733905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3879ff67c9e60d447a7238a8e332c9ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDealer: 5

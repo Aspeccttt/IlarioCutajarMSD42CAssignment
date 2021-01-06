@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    [SerializeField] int bulletsDamage = 1;
+    [SerializeField] int damageDealer = 1;
 
-    public int GetBulletDamage()
+    public int GetDamageDealerContent()
     {
-        return bulletsDamage;
+        return damageDealer;
     }
 
     public void Hit()

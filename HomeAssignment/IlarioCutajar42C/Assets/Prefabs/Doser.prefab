@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6216808632357057609}
   - component: {fileID: 6761412420590795546}
   - component: {fileID: 561515831977197600}
+  - component: {fileID: 5890600486238974227}
+  - component: {fileID: 5761709502361059362}
+  - component: {fileID: -5866092660194128696}
   m_Layer: 0
   m_Name: Doser
   m_TagString: Untagged
@@ -97,3 +100,128 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 0}
+--- !u!60 &5890600486238974227
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628104864323832606}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.13, y: 3.29}
+    newSize: {x: 2.13, y: 3.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.945, y: -1.245}
+      - {x: 0.91499996, y: -1.235}
+      - {x: 0.865, y: -1.225}
+      - {x: 0.53499997, y: -1.2149999}
+      - {x: 0.895, y: -1.2149999}
+      - {x: 0.935, y: -1.185}
+      - {x: 0.935, y: 0.465}
+      - {x: 0.995, y: 0.525}
+      - {x: 1.005, y: 0.565}
+      - {x: 1.005, y: 1.245}
+      - {x: 0.995, y: 1.295}
+      - {x: 0.97499996, y: 1.3149999}
+      - {x: 0.945, y: 1.3349999}
+      - {x: 0.945, y: 1.4449999}
+      - {x: 0.935, y: 1.5749999}
+      - {x: 0.91499996, y: 1.5949999}
+      - {x: 0.275, y: 1.5949999}
+      - {x: 0.255, y: 1.5749999}
+      - {x: 0.255, y: 1.525}
+      - {x: 0.24499999, y: 1.485}
+      - {x: -0.24499999, y: 1.485}
+      - {x: -0.24499999, y: 1.5749999}
+      - {x: -0.265, y: 1.5949999}
+      - {x: -0.905, y: 1.5949999}
+      - {x: -0.92499995, y: 1.5749999}
+      - {x: -0.935, y: 1.505}
+      - {x: -0.935, y: 1.435}
+      - {x: -0.92499995, y: 1.365}
+      - {x: -0.92499995, y: 1.3249999}
+      - {x: -0.955, y: 1.3249999}
+      - {x: -0.98499995, y: 1.305}
+      - {x: -0.995, y: 1.275}
+      - {x: -0.995, y: 0.53499997}
+      - {x: -0.965, y: 0.49499997}
+      - {x: -0.935, y: 0.49499997}
+      - {x: -0.935, y: 0.42499998}
+      - {x: -0.92499995, y: 0.355}
+      - {x: -0.92499995, y: -1.1949999}
+      - {x: -0.905, y: -1.2149999}
+      - {x: -0.825, y: -1.2149999}
+      - {x: -0.515, y: -1.225}
+      - {x: -0.885, y: -1.225}
+      - {x: -0.935, y: -1.235}
+      - {x: -0.98499995, y: -1.255}
+      - {x: -1.025, y: -1.305}
+      - {x: -1.045, y: -1.365}
+      - {x: -1.045, y: -1.525}
+      - {x: -1.035, y: -1.5949999}
+      - {x: -1.015, y: -1.615}
+      - {x: 1.005, y: -1.615}
+      - {x: 1.025, y: -1.5949999}
+      - {x: 1.025, y: -1.3349999}
+      - {x: 0.97499996, y: -1.265}
+    - - {x: -0.285, y: -1.225}
+      - {x: -0.235, y: -1.185}
+      - {x: -0.235, y: -1.125}
+      - {x: 0.24499999, y: -1.1949999}
+      - {x: 0.275, y: -1.225}
+      - {x: 0.315, y: -1.225}
+      - {x: 0.325, y: -1.2149999}
+      - {x: 0.345, y: -1.2149999}
+      - {x: 0.355, y: -1.225}
+      - {x: 0.36499998, y: -1.225}
+      - {x: 0.36499998, y: -1.2149999}
+      - {x: -0.345, y: -1.2149999}
+      - {x: -0.345, y: -1.225}
+--- !u!114 &5761709502361059362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628104864323832606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9d944be11665445902df598fed756a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHP: 1
+  enemyBulletPrefab: {fileID: 3772493768898794987, guid: cafa79413269dab49b4d92b4b61e9455, type: 3}
+  bulletCounter: 0
+  enemyBulletSpeed: 0
+  deathEffect: {fileID: 0}
+  explosionDuration: 1
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+--- !u!114 &-5866092660194128696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628104864323832606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3879ff67c9e60d447a7238a8e332c9ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDealer: 5

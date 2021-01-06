@@ -20,7 +20,7 @@ public class WaveConfiguration : ScriptableObject
 
     [SerializeField] float timebetweenspawns = 10f;
 
-    [SerializeField] public int currentWaveDamage = 1;
+    //[SerializeField] bool isFiring = false;
 
     public GameObject FetchEnemyPrefab()
     {
@@ -51,11 +51,6 @@ public class WaveConfiguration : ScriptableObject
     public float FetchTimeBetweenSpawns()
     {
         return timebetweenspawns;
-    }
-
-    public float FetchTheCurrentDamageOfWave()
-    {
-        return currentWaveDamage;
     }
 
     // Start is called before the first frame update
