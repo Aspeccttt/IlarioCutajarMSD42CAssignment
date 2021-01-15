@@ -142,9 +142,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167012a4987322347bcd70562ca7d4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 10
   playerMoveSpeed: 5
   playerPadding: 0.7
+  deathsound: {fileID: 8300000, guid: 9dc6cd9d46650114fbc273aaf761e8b1, type: 3}
+  deathSoundVolume: 0.6
 --- !u!114 &-6491392547842639542
 MonoBehaviour:
   m_ObjectHideFlags: 0

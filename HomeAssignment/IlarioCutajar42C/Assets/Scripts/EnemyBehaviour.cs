@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-
     //Properties
     [SerializeField] float enemyHP = 1;
     [SerializeField] GameObject enemyBulletPrefab;
@@ -12,13 +11,20 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] float enemyBulletSpeed;
     
     //Effects
-    //[SerializeField] GameObject deathEffect;
-    //[SerializeField] float explosionDuration = 1f;
+    [SerializeField] GameObject deathEffect;
+    [SerializeField] float explosionDuration = 1f;
+    [SerializeField] AudioClip gunShotSound;
+    [SerializeField] AudioClip deathsound;
+    [SerializeField] [Range(0, 1)] float enemyDeathSoundVolume = 0.60f;
+    [SerializeField] [Range(0, 1)] float gunShotVolume = 0.40f;
 
     //Debugging
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
+
+    //points
+    [SerializeField] int scoreValue = 50;
 
 
     // Start is called before the first frame update
@@ -30,7 +36,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //checkIfFiring();
+        checkIfFiring();
     }
 
 
@@ -38,14 +44,16 @@ public class EnemyBehaviour : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
-
+        AudioSource.PlayClipAtPoint(deathsound, Camera.main.transform.position, enemyDeathSoundVolume);
         //add code to add EFFECTS AND SOUND + DECREASE POINTS LATER
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
     }
 
     private void Fire()
     {
         GameObject bullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity) as GameObject;
 
+        AudioSource.PlayClipAtPoint(gunShotSound, Camera.main.transform.position, gunShotVolume);
         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyBulletSpeed);
     }
 

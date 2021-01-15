@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 public class Player : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Player : MonoBehaviour
     [SerializeField] public float health = 50;
     [SerializeField] float playerMoveSpeed = 5f;
     [SerializeField] float playerPadding = 0.7f;
+
+    [SerializeField] AudioClip deathsound;
+    [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.60f;
 
     //variables for movement.
     float xMin, xMax;
@@ -22,6 +26,16 @@ public class Player : MonoBehaviour
     void Update()
     {
         MoveControls();
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(deathsound, Camera.main.transform.position, deathSoundVolume);
+        //add code to add EFFECTS AND SOUND + DECREASE POINTS LATER
+
+        FindObjectOfType<Level>().LoadGameOver();
+
     }
 
 
@@ -49,9 +63,22 @@ public class Player : MonoBehaviour
 
     //damage handler CODE SECTION ---------------------------------------------------------------------
 
+    private void ProcessHit(DamageDealer dmgDealer, BulletDamage bltDealer)
+    {
+        health -= dmgDealer.GetDamageDealerContent();
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //
+        DamageDealer dmgDealer = collision.gameObject.GetComponent<DamageDealer>();
+        BulletDamage bltDealer = collision.gameObject.GetComponent<BulletDamage>();
+
+        ProcessHit(dmgDealer,bltDealer);
     }
 
 }
