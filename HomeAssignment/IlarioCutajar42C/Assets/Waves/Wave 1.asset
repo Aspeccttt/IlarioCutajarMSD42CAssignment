@@ -17,3 +17,4 @@ MonoBehaviour:
   numberOfCars: 2
   enemyPrefabSpeed: 3
   timebetweenspawns: 4
+  isFiring: 1

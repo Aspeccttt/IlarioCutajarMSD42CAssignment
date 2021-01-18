@@ -171,7 +171,7 @@ MonoBehaviour:
   deathEffect: {fileID: 2629935293930594756, guid: 23689a6ff889d7c41a8a8a57df76b58c, type: 3}
   explosionDuration: 1
   gunShotSound: {fileID: 8300000, guid: 1c51c587b60d9934da3b5ab76c7a3eb8, type: 3}
-  deathsound: {fileID: 8300000, guid: be0d7cba0a464224a9f3c42575b47d4b, type: 3}
+  deathsound: {fileID: 8300000, guid: 9dc6cd9d46650114fbc273aaf761e8b1, type: 3}
   enemyDeathSoundVolume: 0.6
   gunShotVolume: 0.284
   shotCounter: 0
@@ -189,4 +189,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3879ff67c9e60d447a7238a8e332c9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDealer: 5
+  damageDealer: 3

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Shredder : MonoBehaviour
 {
-    [SerializeField] int scoreValue = 50;
+    //[SerializeField] int scoreValue = 50;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D otherObject)
     {
-        Destroy(collision.gameObject);
-        FindObjectOfType<GameSession>().AddToScore(scoreValue);
+        Destroy(otherObject.gameObject);
+        //FindObjectOfType<GameSession>().AddToScore(scoreValue);
     }
 }

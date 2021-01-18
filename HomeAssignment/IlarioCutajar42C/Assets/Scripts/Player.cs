@@ -6,7 +6,7 @@ using UnityEngine.Scripting.APIUpdating;
 public class Player : MonoBehaviour
 {
     //properties
-    [SerializeField] public int health = 50;
+    [SerializeField] int health = 50;
     [SerializeField] float playerMoveSpeed = 5f;
     [SerializeField] float playerPadding = 0.7f;
 
@@ -31,11 +31,6 @@ public class Player : MonoBehaviour
     }
 
     public int GetHealth()
-    {
-        return health;
-    }
-
-    public int GetHealthEnd(int healthEnd)
     {
         return health;
     }
@@ -75,13 +70,12 @@ public class Player : MonoBehaviour
 
     //damage handler CODE SECTION ---------------------------------------------------------------------
 
-    private void ProcessHit(DamageDealer dmgDealer, BulletDamage bulletDamage)
+    private void ProcessHit(DamageDealer dmgDealer)
     {
         health -= dmgDealer.GetDamageDealerContent();
 
         if (health <= 0)
         {
-            FindObjectOfType<GameSession>().AddToHealth(scoreValue);
             Die();
         }
     }
@@ -89,9 +83,8 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer dmgDealer = collision.gameObject.GetComponent<DamageDealer>();
-        BulletDamage bltDealer = collision.gameObject.GetComponent<BulletDamage>();
 
-        ProcessHit(dmgDealer,bltDealer);
+        ProcessHit(dmgDealer);
     }
 
 }
