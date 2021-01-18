@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167012a4987322347bcd70562ca7d4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 50
   playerMoveSpeed: 5
   playerPadding: 0.7
   deathsound: {fileID: 8300000, guid: 9dc6cd9d46650114fbc273aaf761e8b1, type: 3}
@@ -177,7 +177,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
