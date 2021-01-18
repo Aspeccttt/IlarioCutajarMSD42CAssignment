@@ -143,10 +143,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  playerMoveSpeed: 5
+  playerMoveSpeed: 4
   playerPadding: 0.7
   deathsound: {fileID: 8300000, guid: 9dc6cd9d46650114fbc273aaf761e8b1, type: 3}
   deathSoundVolume: 0.6
+  deathEffect: {fileID: 6468469758049507, guid: 60ebf643759257340beb1eef5d10c991, type: 3}
+  explosionDuration: 1
 --- !u!114 &-6491392547842639542
 MonoBehaviour:
   m_ObjectHideFlags: 0

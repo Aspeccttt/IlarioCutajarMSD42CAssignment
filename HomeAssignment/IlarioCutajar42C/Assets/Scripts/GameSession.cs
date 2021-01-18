@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-
+    int finalHealth;
     int score = 0;
 
     // Start is called before the first frame update
@@ -42,9 +42,24 @@ public class GameSession : MonoBehaviour
         score += scoreValue;
     }
 
+    public void AddToHealth(int healthValue)
+    {
+        finalHealth = healthValue;
+    }
+
+    public void SubtractToScore(int scoreSubtract)
+    {
+        score -= scoreSubtract;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        if (score >= 100)
+        {
+            
+            FindObjectOfType<Level>().LoadGameWon();
+
+        }
     }
 }

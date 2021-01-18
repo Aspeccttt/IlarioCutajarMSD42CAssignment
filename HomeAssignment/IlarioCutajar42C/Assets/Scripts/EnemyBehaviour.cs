@@ -23,9 +23,6 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
 
-    //points
-    [SerializeField] int scoreValue = 50;
-
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +42,8 @@ public class EnemyBehaviour : MonoBehaviour
     {
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(deathsound, Camera.main.transform.position, enemyDeathSoundVolume);
-        //add code to add EFFECTS AND SOUND + DECREASE POINTS LATER
-        FindObjectOfType<GameSession>().AddToScore(scoreValue);
+        GameObject explosion = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
     }
 
     private void Fire()

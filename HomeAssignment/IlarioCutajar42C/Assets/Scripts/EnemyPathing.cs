@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyPathing : MonoBehaviour
 {
+    int scoreValue = 5;
 
     [SerializeField] List<Transform> waypoints;
 
@@ -45,6 +46,7 @@ public class EnemyPathing : MonoBehaviour
         }
             else
         {
+            FindObjectOfType<GameSession>().AddToScore(scoreValue);
             Destroy(gameObject);
         }
     }

@@ -187,11 +187,12 @@ MonoBehaviour:
   enemyBulletPrefab: {fileID: 3772493768898794987, guid: cafa79413269dab49b4d92b4b61e9455, type: 3}
   bulletCounter: 0
   enemyBulletSpeed: 0
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 6468469758049507, guid: 60ebf643759257340beb1eef5d10c991, type: 3}
   explosionDuration: 1
   gunShotSound: {fileID: 8300000, guid: 1c51c587b60d9934da3b5ab76c7a3eb8, type: 3}
   deathsound: {fileID: 8300000, guid: 9dc6cd9d46650114fbc273aaf761e8b1, type: 3}
   enemyDeathSoundVolume: 0.75
+  gunShotVolume: 0.4
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3

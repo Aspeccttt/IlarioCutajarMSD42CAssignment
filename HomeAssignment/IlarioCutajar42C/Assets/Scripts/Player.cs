@@ -6,12 +6,14 @@ using UnityEngine.Scripting.APIUpdating;
 public class Player : MonoBehaviour
 {
     //properties
-    [SerializeField] public float health = 50;
+    [SerializeField] public int health = 50;
     [SerializeField] float playerMoveSpeed = 5f;
     [SerializeField] float playerPadding = 0.7f;
 
     [SerializeField] AudioClip deathsound;
     [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.60f;
+    [SerializeField] GameObject deathEffect;
+    [SerializeField] float explosionDuration = 1f;
 
     //variables for movement.
     float xMin, xMax;
@@ -28,14 +30,24 @@ public class Player : MonoBehaviour
         MoveControls();
     }
 
+    public int GetHealth()
+    {
+        return health;
+    }
+
+    public int GetHealthEnd(int healthEnd)
+    {
+        return health;
+    }
+
     private void Die()
     {
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(deathsound, Camera.main.transform.position, deathSoundVolume);
-        //add code to add EFFECTS AND SOUND + DECREASE POINTS LATER
+        GameObject explosion = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
 
         FindObjectOfType<Level>().LoadGameOver();
-
     }
 
 
@@ -63,12 +75,13 @@ public class Player : MonoBehaviour
 
     //damage handler CODE SECTION ---------------------------------------------------------------------
 
-    private void ProcessHit(DamageDealer dmgDealer, BulletDamage bltDealer)
+    private void ProcessHit(DamageDealer dmgDealer, BulletDamage bulletDamage)
     {
         health -= dmgDealer.GetDamageDealerContent();
 
         if (health <= 0)
         {
+            FindObjectOfType<GameSession>().AddToHealth(scoreValue);
             Die();
         }
     }
