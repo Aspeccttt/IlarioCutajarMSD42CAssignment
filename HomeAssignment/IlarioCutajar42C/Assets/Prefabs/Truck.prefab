@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7642166517088891392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.564, y: -1.1, z: 0}
-  m_LocalScale: {x: 1.5573833, y: 1.851303, z: 0.6639212}
+  m_LocalScale: {x: 0.9733646, y: 0.80994505, z: 0.6639212}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -184,18 +184,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHP: 1
-  enemyBulletPrefab: {fileID: 3772493768898794987, guid: cafa79413269dab49b4d92b4b61e9455, type: 3}
-  bulletCounter: 0
-  enemyBulletSpeed: 0
   deathEffect: {fileID: 6468469758049507, guid: 60ebf643759257340beb1eef5d10c991, type: 3}
   explosionDuration: 1
-  gunShotSound: {fileID: 8300000, guid: 1c51c587b60d9934da3b5ab76c7a3eb8, type: 3}
   deathsound: {fileID: 8300000, guid: 9dc6cd9d46650114fbc273aaf761e8b1, type: 3}
   enemyDeathSoundVolume: 0.75
-  gunShotVolume: 0.4
-  shotCounter: 0
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
 --- !u!114 &-5013999849263137105
 MonoBehaviour:
   m_ObjectHideFlags: 0

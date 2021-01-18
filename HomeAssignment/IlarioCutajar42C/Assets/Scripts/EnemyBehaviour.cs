@@ -47,7 +47,6 @@ public class EnemyBehaviour : MonoBehaviour
         {
             Die();
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

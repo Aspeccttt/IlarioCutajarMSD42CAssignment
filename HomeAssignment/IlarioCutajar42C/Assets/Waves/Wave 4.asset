@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave 4
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7642166517088891392, guid: f79424f4e74d19148a8de8b9d626c643, type: 3}
-  path: {fileID: 7216396143080606848, guid: 2dd57135903017148beee7067c6bfd24, type: 3}
+  path: {fileID: 4303629060017955400, guid: a4c993bbdf0bf794495f7bef5b93231f, type: 3}
   numberOfCars: 1
   enemyPrefabSpeed: 3
   timebetweenspawns: 5
